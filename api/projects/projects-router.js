@@ -65,7 +65,7 @@ router.put('/:id', async (req,res) => {
            res.status(404).json({
                message: "Project not found"
            })
-       } else if(!req.body.name || !req.body.description ) {
+       } else if(!req.body.name || !req.body.description || !req.body.completed ) {
         res.status(400).json({
             message: "missing fields"
         })
